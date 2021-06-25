@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+    <!-- <style>
+    .owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel{display:none;position:relative;width:100%;-ms-touch-action:pan-y}.owl-carousel .owl-wrapper{display:none;position:relative;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%}.owl-carousel .owl-wrapper-outer.autoHeight{-webkit-transition:height 500ms ease-in-out;-moz-transition:height 500ms ease-in-out;-ms-transition:height 500ms ease-in-out;-o-transition:height 500ms ease-in-out;transition:height 500ms ease-in-out}.owl-carousel .owl-item{float:left}.owl-controls .owl-page,.owl-controls .owl-buttons div{cursor:pointer}.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.grabbing{cursor:url(grabbing.png) 8 8,move}.owl-carousel .owl-wrapper,.owl-carousel .owl-item{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}
+    .owl-theme .owl-controls{margin-top:10px;text-align:center}.owl-theme .owl-controls .owl-buttons div{color:#FFF;display:inline-block;zoom:1;*display:inline;margin:5px;padding:3px 10px;font-size:12px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background:#869791;filter:Alpha(Opacity=50);opacity:.5}.owl-theme .owl-controls.clickable .owl-buttons div:hover{filter:Alpha(Opacity=100);opacity:1;text-decoration:none}.owl-theme .owl-controls .owl-page{display:inline-block;zoom:1;*display:inline}.owl-theme .owl-controls .owl-page span{display:block;width:12px;height:12px;margin:5px 7px;filter:Alpha(Opacity=50);opacity:.5;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;background:#869791}.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span{filter:Alpha(Opacity=100);opacity:1}.owl-theme .owl-controls .owl-page span.owl-numbers{height:auto;width:auto;color:#FFF;padding:2px 10px;font-size:12px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px}.owl-item.loading{min-height:150px;background:url(AjaxLoader.gif) no-repeat center center}
+</style> 
+  -->
+ <style>
+.demo{
+    /* background: -webkit-linear-gradient(to left, #f99da6, #ffc371, #f99da6);
+    background:  linear-gradient(to left, #f99da6, #ffc371, #f99da6); */
+    background-color: #ec7636;
+}
+.testimonial{
+    text-align: center;
+    margin: 50px 25% 0;
+    padding: 0 10% 1%;
+    background: #fff;
+    border-radius: 5px;
+}
+.testimonial .pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    margin-top: -50px;
+    overflow: hidden;
+    /* box-shadow:0 2px 6px rgba(0, 0, 0, 0.15); */
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.testimonial .description{
+    font-size: 16px;
+    font-style: italic;
+    color: #808080;
+    line-height: 30px;
+    margin: 10px 0 20px;
+}
+.testimonial .testimonial-title{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
+}
+.testimonial .post{
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.testimonial .post:before{
+    content: "";
+    width: 30px;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #d3d3d3;
+}
+.testimonial .testimonial-rating{
+    margin: 0 0 15px 0;
+    padding: 0;
+    list-style: none;
+}
+.testimonial .testimonial-rating li{
+    color: #d3d3d3;
+    display: inline-block;
+}
+.testimonial .testimonial-rating li.fa-star{
+    color: #333;
+}
+.owl-theme .owl-controls{
+    margin-top: 30px;
+}
+.owl-theme .owl-controls .owl-pagination{
+    width: 250px;
+    padding: 10px;
+    margin: 0 auto;
+    line-height: 13px;
+    /* background: #fe7f8b; */
+}
+.owl-theme .owl-controls .owl-page span{
+    width: 12px;
+    height: 12px;
+    border-radius: 30;
+    background: transparent;
+    border: 1px solid #fff;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    border: 4px solid #fff;
+}
+.owl-item{
+    border-radius: 5px;
+}
+.testimonial-slider{
+    border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+    .testimonial{
+    margin: 20px 5% 0;
+    padding: 0 4% 1%;
+    background: #fff;
+    border-radius: 5px;
+}
+}
+</style>
+</head>
+<body>
+
+    <a href="">Hello, this is a link</a>
+    <div class="demo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <div class="pic">
+                                <img src="images/test1.PNG" alt="">
+                            </div>
+                            <p class="description">
+                                " I was food and beverage coordinator for Mood Indigo 2020. Starting from scratch to closing various sponsorship deals, my cordie tenure taught me a lot of things and one of them was to never give up, that is you always don't get success in the first try but the CG’s kept motivating me and in the end it all turned out good. Also it upgraded my skills to new heights. Apart from the work, we used to play different fun activities which made a virtual time pleasure. "
+                            </p>
+                            <h3 class="testimonial-title">Anusar Modi 
+                            </h3>
+                            <!-- <span class="post">Web Developer</span> -->
+                            <!-- <ul class="testimonial-rating">
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star"></li>
+                            </ul> -->
+                        </div>
+     
+                        <div class="testimonial">
+                            <div class="pic">
+                                <img src="images/test2.PNG" alt="">
+                            </div>
+                            <p class="description">
+                                " Working in the Hospitality and PR department of Mood Indigo gave me a wide range of experience in various other domains like marketing, publicity, social initiatives etc. apart from the core department. I consider it as an overall package in which you get to explore in every direction and then specialise in one. And finally, what’s better than to get the opportunity to work and attend MI, together!!
+                                 "
+                            </p>
+                            <h3 class="testimonial-title">Prithviraj Chauhan</h3>
+                            <!-- <span class="post">Web Designer</span> -->
+                            <!-- <ul class="testimonial-rating">
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul> -->
+                        </div>
+                        <div class="testimonial">
+                            <div class="pic">
+                                <img src="images/test3.PNG" alt="">
+                            </div>
+                            <p class="description">
+                                " I was an Informals coordinator for Mood Indigo 2020. Being a part of the Informals team helped me to become more confident and improve my creative thinking. I got to interact with a wide variety of artists as well as take interviews of students from various colleges, this really helped in articulating my thoughts well. The feeling that I got after the successful execution of an event I was managing was simply amazing.
+                                "
+                            </p>
+                            <h3 class="testimonial-title">Nihar Bhoyar</h3>
+                            <!-- <span class="post">Web Designer</span> -->
+                            <!-- <ul class="testimonial-rating">
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul> -->
+                        </div>
+                        <div class="testimonial">
+                            <div class="pic">
+                                <img src="images/test4.PNG" alt="">
+                            </div>
+                            <p class="description">
+                                " I was a Marketing Coordie in MI last year. From contacting different people in the industry for partnerships to ideating on new things for MI, it was personally a great learning curve. While contacting it happens that you don’t get replies right away but the CGs kept me motivated, and in the end when you crack a deal right from scratch, the feeling of achieving something on your own is indescribable and it strengthens your confidence. "
+                            </p>
+                            <h3 class="testimonial-title">Aryan Khanna</h3>
+                            <!-- <span class="post">Web Designer</span> -->
+                            <!-- <ul class="testimonial-rating">
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul> -->
+                        </div>
+                        <div class="testimonial">
+                            <div class="pic">
+                                <img src="images/test5.PNG" alt="">
+                            </div>
+                            <p class="description">
+                                " Becoming a media coordinator was altogether a unique kind of experience as I got to know about the marketing and publicity aspect of social media and its immense influence. I learned a lot throughout my tenure in a fun way, which I think will help me in the future irrespective of the career path I choose.
+                                "
+                            </p>
+                            <h3 class="testimonial-title">Yash Patil</h3>
+                            <!-- <span class="post">Web Designer</span> -->
+                            <!-- <ul class="testimonial-rating">
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        pagination: true,
+        autoPlay:true
+    });
+
+</script> 
+</html>
