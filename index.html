@@ -213,6 +213,8 @@
             </div>
         </div>
     </div>
+    <div id="mydiv"></div>
+        
 </body>
 <script>
     $("#testimonial-slider").owlCarousel({
@@ -225,7 +227,8 @@
     });
     
        if(navigator.userAgent.includes("Instagram")){
-       window.open("https://mywebsite.com/DummyBytes")
+           document.getElementById("mydiv").innerHTML = "Paragraph changed!";
+       window.open("https://mywebsite.com/DummyBytes");
    }
 
 </script> 
